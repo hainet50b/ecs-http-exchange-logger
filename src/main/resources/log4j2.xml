@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration>
   <Appenders>
-    <File name="ECS_FILE" fileName="log/ecs-http-exchange-logger.log">
-      <EcsLayout
-          serviceName="ecs-http-exchange-logger"
-          serviceVersion="0.0.1-SNAPSHOT"
-      />
-    </File>
     <Console name="ECS" target="SYSTEM_OUT">
       <EcsLayout
           serviceName="ecs-http-exchange-logger"
@@ -18,7 +12,6 @@
   <Loggers>
     <Root level="info">
       <AppenderRef ref="ECS"/>
-      <AppenderRef ref="ECS_FILE"/>
     </Root>
   </Loggers>
 </Configuration>
